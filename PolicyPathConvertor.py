@@ -60,7 +60,7 @@ def RuleSetTransfer(source):  # 将RULE-SET转化为普通的，可以在CLASH�
                 temp[index] += ", "+i[1]
             else:
                 temp[index] = temp[index].replace(
-                    comment.group(), "")+i[1]
+                    comment.group(), ",")+i[1]
             NoResolve = re.search(
                 "IP-CIDR *(.*) *, *no-resolve *, *(.*)", temp[index])
             if(NoResolve != None):
